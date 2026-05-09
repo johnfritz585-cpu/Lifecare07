@@ -1,6 +1,6 @@
 // Login credentials
-const correctUsername = "user";
-const correctPassword = "password";
+const correctUsername = "Fritz";
+const correctPassword = "Fritz123";
 
 // Handle login form submission
 document.getElementById("loginForm").addEventListener("submit", function(event) {
