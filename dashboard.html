@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Student Life & Wellness Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to Your Dashboard</h1>
+            <button onclick="logout()">Logout</button>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <ul>
+            <li><a href="#academic-planner">Academic Planner</a></li>
+            <li><a href="#health-monitoring">Health and Wellness</a></li>
+            <li><a href="#mental-health">Mental Health Support</a></li>
+            <li><a href="#daily-life">Life Management</a></li>
+            <li><a href="#student-support">Student Support</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <section id="dashboard-summary">
+            <h2>Dashboard Overview</h2>
+            <div class="cards-container">
+                <div class="card">
+                    <h3>Upcoming Tasks</h3>
+                    <p>3 tasks due today</p>
+                </div>
+                <div class="card">
+                    <h3>Water Intake</h3>
+                    <p>2.5L of water consumed</p>
+                </div>
+                <div class="card">
+                    <h3>Sleep Hours</h3>
+                    <p>8 hours slept last night</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="academic-planner">
+            <h2>Smart Academic Planner</h2>
+            <div>
+                <input type="text" id="classSchedule" placeholder="Enter Class Schedule">
+                <button onclick="addClass()">Add Class</button>
+            </div>
+        </section>
+
+        <section id="health-monitoring">
+            <h2>Health and Wellness Monitoring</h2>
+            <div>
+                <label>Water Intake</label>
+                <input type="number" id="waterIntake" placeholder="Liters of Water">
+                <button onclick="trackWater()">Track Water</button>
+            </div>
+            <div>
+                <label>Sleep Hours</label>
+                <input type="number" id="sleepHours" placeholder="Hours of Sleep">
+                <button onclick="trackSleep()">Track Sleep</button>
+            </div>
+        </section>
+
+        <section id="mental-health">
+            <h2>Mental Health and Stress Support</h2>
+            <div>
+                <label>Current Mood</label>
+                <select id="moodSelect">
+                    <option value="Happy">Happy</option>
+                    <option value="Sad">Sad</option>
+                    <option value="Stressed">Stressed</option>
+                    <option value="Relaxed">Relaxed</option>
+                </select>
+                <button onclick="trackMood()">Track Mood</button>
+            </div>
+        </section>
+
+        <section id="daily-life">
+            <h2>Daily Life Management</h2>
+            <div>
+                <input type="text" id="habitInput" placeholder="Enter Habit">
+                <button onclick="trackHabit()">Track Habit</button>
+            </div>
+        </section>
+
+        <section id="student-support">
+            <h2>Student Support System</h2>
+            <div>
+                <textarea id="peerSupport" placeholder="Enter Peer Support Message"></textarea>
+                <button onclick="sendPeerSupport()">Send Support</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
